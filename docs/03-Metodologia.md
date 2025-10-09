@@ -43,72 +43,43 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 > Apresente a divisão de papéis entre os membros do grupo em cada Sprint. O desejável é que, em cada Sprint, o aluno assuma papéis diferentes na equipe. Siga o modelo do exemplo abaixo:
 
 #### Sprint 1
-##### Contexto 
-- Responsável pela introdução e problema: Arthur Alves
-- Responsável pelos objetivos e justificativa: Raphael
-- Responsável pelo publico alvo: Arthur Souza
-##### Especificação do projeto
-- Modelo de negócio realizado por: Arthur Souza, Raphael
-- Personas e histórias de usuário: Arthur Alves, Arthur Souza
-- Requisitos Funcionas e não funcionais: Arthur Alves, Adenilson
-- Diagramas de caso de uso: Adenilson
-##### Metodologia
-- Controle de versão: Lucas
-- Divisão de papeis e quadro de tarefas: Arthur Souza
-- Processo e utilização do GitHubProjects: Arthur Souza
-- Ferramentas: Lucas
+- Contexto: Arthur Alves, Arthur Souza, Raphael
+- Especificação do projeto: Adenilson, Arthur Alves, Arthur Souza, Raphael
+- Metodologia: Lucas, Arthur Souza
   
 
 #### Sprint 2
-##### Projeto de interface
-- Telas e Wireframes: Arthur Alves
-- UserFlow: Raphael
-- Jornada do usuário: Adenilson
-###### Template padrão da aplicação
-- Toda descrição sobre paleta de cores, logotipo, layout: Arthur Souza, Lucas
-###### Arquitetura da solução
-- Estrutura do sitema: Arthur Souza
-- Diagrama de classes: Arthur Souza
-- Modelo conceitual, relacional e físico: Arthur Souza
-- Tecnologias e hospedagem: Raphael
-- Qualidades de software: Raphael
+- _Scrum master_: AlunaY
+- Desenvolvedor _front-end_: AlunoX
+- Desenvolvedor _back-end_: AlunoK
+- Testes: AlunaZ
 
-#### Sprint 3
-- A definir
-
-#### Sprint 4
-- A definir
-  
 ###  Quadro de tarefas
 
 > Apresente a divisão de tarefas entre os membros do grupo e o acompanhamento da execução, conforme o exemplo abaixo.
 
 #### Sprint 1
 
-Atualizado em: 23/09/2025
+Atualizado em: 02/09/2025
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
 | Arthur A, Arthur S, Raphael | Contexto | 22/08/2025     | 02/09/2025 | ✔️    | 23/08/2025 |
 | Adenilson, Arthur A, Arthur S, Raphael | Especificação do projeto | 22/08/2025     | 02/09/2025 | ✔️    | 26/08/2025 |
-| Lucas, Arthur S | Metodologia  | 31/08/2025    | 02/09/2025 | ⌛     | ---------- |
+| Lucas, Arthur S | Metodologia  | 31/08/2025    | 02/09/2025 | ⌛     | 02/09/2025 |
 
 
 #### Sprint 2
 
-Atualizado em: 23/09/2025
+Atualizado em: 21/04/2024
 
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado em    |
 | :----         |    :----         |      :----:    | :----:     | :----: | :----:          |
-| Adenilson, Arthur A, Arthur S, Raphael | Projeto de interface   | 15/09/2025    | 23/09/2025 | ✔️  | 23/09/2025    |
-| Arthur A, Lucas | Template padrão de aplicação   | 18/09/2025    | 23/09/2025 | ✔️   |  23/09/2025 |
-| Arthur A, Raphael | Arquitetura de solução  | 18/09/2025    | 23/09/2025 | ✔️  | 23/09/2025 |
+| AlunaX        | Página inicial   | 01/02/2024     | 07/03/2024 | ✔️    | 05/02/2024      |
+| AlunaZ        | CSS unificado    | 03/02/2024     | 10/03/2024 | 📝    |                 |
+| AlunoY        | Página de login  | 01/02/2024     | 07/03/2024 | ⌛     |                 |
+| AlunoK        | Script de login  |  01/01/2024    | 12/03/2024 | ❌    |       |
 
-#### Sprint 3
-- A definir
-
-#### Sprint 4
-- A definir
 
 Legenda:
 - ✔️: terminado
@@ -134,9 +105,8 @@ A figura abaixo apresenta um exemplo da estrutura utilizada pela equipe para ger
 |-------------------------------------|------------------------------------|----------------------------------------|
 | Repositório de código fonte         | GitHub                             | [Repositório](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/2025-2-p3-tidai-doaqui) |
 | Documentos do projeto               | GitHub                             | [Documentação](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/2025-2-p3-tidai-doaqui/tree/main/docs) |
-| Projeto de interface                | Figma                              | [Figma](https://www.figma.com/design/zkdzPRsLwolYwcqC5l9z2M/telas-TI?node-id=0-1&t=fgCNNEVdk6Go7BL1-1)   |
+| Projeto de interface                | Figma                              | http://....                            |
 | Gerenciamento do projeto            | GitHub Projects                    | [Projetos](https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/2025-2-p3-tidai-doaqui/projects?query=is%3Aopen) |
 | Hospedagem                          | Vercel                             | http://....                            |
-| Criação de Desing                   | Canva                              | Sem link de acesso| 
 | Comunicação                         | Discord                            | Sem link de acesso | 
  

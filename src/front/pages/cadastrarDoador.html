@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Doador</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        input, button { margin: 5px 0; padding: 8px; width: 300px; }
+        button { width: 150px; }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Doador</h1>
+
+    <form id="formDoador">
+        <input type="text" id="nome" placeholder="Nome" required><br>
+        <input type="text" id="telefone" placeholder="Telefone" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="senha" placeholder="Senha" required><br>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        // ⚠️ Ajuste se sua API não estiver em localhost
+        const API_URL = "http://localhost:5000";
+
+        document.getElementById("formDoador").addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const pessoa = {
+                Nome: document.getElementById("nome").value,
+                Telefone: document.getElementById("telefone").value,
+                Email: document.getElementById("email").value,
+                Senha: document.getElementById("senha").value
+            };
+
+            try {
+                const res = await fetch(`${API_URL}/CadastrarDoador`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(pessoa)
+                });
+
+                if (res.ok) {
+                    const msg = await res.text();
+                    alert(msg);
+                    document.getElementById("formDoador").reset();
+                } else {
+                    alert("Erro ao cadastrar doador!");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Erro na comunicação com o servidor.");
+            }
+        });
+    </script>
+</body>
+</html>

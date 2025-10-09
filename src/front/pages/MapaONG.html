@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de ONGs</title>
+    <link rel="stylesheet" href="../css/ongstyle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Banner Verde -->
+    <header>
+        <div class="banner">
+            <p>Doe o que você não usa mais, limpe o guarda roupa.</p>
+        </div>
+
+        <!-- Barra de Navegação -->
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><img src="../images/logo.png" alt="Camiseta cinza GG masculina"></a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links mobile">
+                <li><a href="indexMasculino.html">Masculino</a></li>
+                <li><a href="indexFeminino.html">Feminino</a></li>
+                <li><a href="MapaONG.html">ONGs</a></li>
+                <li><a href="#">Entrar</a></li>
+                <li><a href="#" class="btn-doar">Quero doar</a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="indexMasculino.html">Masculino</a></li>
+                <li><a href="indexFeminino.html">Feminino</a></li>
+                <li><a href="MapaONG.html">ONGs</a></li>
+                <li><a href="#">Entrar</a></li>
+                <li><a href="#" class="btn-doar">Quero doar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Mapa de ONGs</h1>
+        <div id="map"></div>
+
+        <!-- MAPA DE ONG -->
+
+    </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="../js/ong.js"></script>
+    <script src="../js/indexjs.js"></script>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links.mobile');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

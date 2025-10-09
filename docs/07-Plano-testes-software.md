@@ -28,62 +28,8 @@ Por exemplo:
 | Critério de êxito | - O login foi realizado com sucesso. |
 | Responsável pela elaboração do caso de teste | Nome do integrante da equipe. |
 
-<br>
-
-| **Caso de teste**  | **CT-003 – Filtrar roupas por gênero**  |
-|:---: |:---: |
-| Requisito associado | RF-00X - Verificar se o filtro de gênero exibe corretamente apenas as roupas correspondentes à categoria selecionada. |
-| Objetivo do teste | Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos | - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html <br> - Localizar a seção de roupas <br> - Clicar na opção “Masculino” <br> - Verificar se são exibidas apenas roupas masculinas <br> - Clicar na opção “Feminino” <br> Verificar se são exibidas apenas roupas femininas |
-| Critério de êxito | - As roupas exibidas correspondem corretamente ao gênero selecionado. Nenhum item incorreto é mostrado. |
-| Responsável pela elaboração do caso de teste | Raphael Gustavo de Oliveira Silva |
-
-<br>
-
-| **Caso de teste**  | **CT-004 – Armazenar os dados das roupas em um banco de dados**  |
-|:---: |:---: |
-| Requisito associado | RF-006 - O sistema deve armazenar os dados de usuários, roupas e Ongs em um banco de dados. |
-| Objetivo do teste | Verificar se o sistema está armazenando os dados no banco de dados. |
-| Passos | - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html <br> - Clicar no botão "Quero doar" <br> - Preencher os campo necessários <br> - Clicar em "Enviar" <br> - Abrir MySQL WorkBench <br> - Entrar no banco de dados "DoaAqui" <br> - Fazer uma query de "SELECT * FROM Roupas" |
-| Critério de êxito | - Aparecer todas as roupas cadastradas até o momento. |
-| Responsável pela elaboração do caso de teste | Arthur Souza Carvalho. |
-
-<br>
-
-| **Caso de teste**  | **CT-005 – Armazenar os dados ONG em um banco de dados**  |
-|:---: |:---: |
-| Requisito associado | RF-006 - O sistema deve armazenar os dados de usuários, roupas e Ongs em um banco de dados. |
-| Objetivo do teste | Verificar se o sistema está armazenando os dados no banco de dados. |
-| Passos | - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html <br> - Clicar no botão "Entrar" <br> - Selecionar opção ONG <br> - Preencher os campos necessários <br> - Clicar em "Enviar" <br> - Abrir MySQL WorkBench <br> - Entrar no banco de dados "DoaAqui" <br> - Fazer uma query de "SELECT * FROM ONG" |
-| Critério de êxito | - Aparecer todas as ONGS cadastradas até o momento junto com sua latitude e longitude. |
-| Responsável pela elaboração do caso de teste | Arthur Souza Carvalho. |
-
-<br>
-
-| **Caso de teste**  | **CT-006  – Armazenar os dados de Pessoa(Doador,Receptor) em um banco de dados**  |
-|:---: |:---: | 
-| Requisito associado | RF-006 - O sistema deve armazenar os dados de usuários, roupas e Ongs em um banco de dados. |
-| Objetivo do teste | Verificar se o sistema está armazenando os dados no banco de dados. |
-| Passos | - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html <br> - Clicar no botão "Entrar" <br> - Selecionar uma das opções "Doador/Receptor" <br> - Preencher os campos necessários (Nome, telefone, email, senha) <br> - Clicar em "Enviar" <br> - Abrir MySQL WorkBench <br> - Entrar no banco de dados "DoaAqui" <br> - Fazer uma query de "SELECT d.* , r.* FROM Doador d, Receptor r" |
-| Critério de êxito | - Aparecer todas as Pessoas cadastradas até o momento. |
-| Responsável pela elaboração do caso de teste | Arthur Souza Carvalho. |
-
-<br>
-
-| **Caso de teste**  | **CT-007 – Recuperar senha**  |
-|:---: |:---: |
-| Requisito associado | RF-009 - 	O sistema deve permitir que os usuários recuperem a senha em caso de esquecimento. |
-| Objetivo do teste | Verificar se o sistema está efetuando a alteração de senha com email válido. |
-| Passos | - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html <br> - Clicar no botão "Entrar" <br> - Clicar na opção "Esqueci minha senha" <br> - <br> - Informar o email da conta na qual deseja recuperar <br> - Clicar em "Enviar" <br> - Acessar a conta do email <br> - Clicar na mensagem de "Recuperar senha" <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/RedefinirSenha.html <br> - Digitar a nova senha desejada <br> - Clicar em "Enviar" |
-| Critério de êxito | - Senha alterada com sucesso. |
-| Responsável pela elaboração do caso de teste | Arthur Souza Carvalho. |
-
-
-
 
 ## Ferramentas de testes (opcional)
-
-> MySQL Workbench - Utilizado para poder visualizar o banco de dados com facilidades e efetuar as querys.
 
 Comente sobre as ferramentas de testes utilizadas.
  

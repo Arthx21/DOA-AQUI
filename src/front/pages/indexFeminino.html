@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoaAqui</title>
+  <link rel="stylesheet" href="../css/styleFeminino.css" />
+</head>
+
+<body>
+  <!-- Banner Verde -->
+  <header>
+    <div class="banner">
+      <p>Doe o que você não usa mais, limpe o guarda roupa.</p>
+    </div>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+      <div class="logo"><a href="index.html"><img src="../images/logo.png" alt="Camiseta cinza GG masculina"></a></div>
+      <input type="text" placeholder="Buscar..." class="search-bar" />
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      <ul class="nav-links mobile">
+        <li><a href="indexMasculino.html">Masculino</a></li>
+        <li><a href="indexFeminino.html">Feminino</a></li>
+        <li><a href="MapaONG.html">ONGs</a></li>
+        <li><a href="#">Entrar</a></li>
+        <li><a href="#" class="btn-doar">Quero doar</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="indexMasculino.html">Masculino</a></li>
+        <li><a href="indexFeminino.html">Feminino</a></li>
+        <li><a href="MapaONG.html">ONGs</a></li>
+        <li><a href="#">Entrar</a></li>
+        <li><a href="#" class="btn-doar">Quero doar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main>
+
+    <!-- Seção Feminina -->
+    <section class="categoria">
+      <h2>Feminina</h2>
+      <div style="position: relative; overflow: hidden;">
+        <button class="seta esquerda" onclick="rolarEsquerda2()">&#10094;</button>
+        <div class="roupas">
+          <div class="roupas" id="carrossel2">
+            
+          </div>
+        </div>
+        <button class="seta direita" onclick="rolarDireita2()">&#10095;</button>
+      </div>
+    </section>
+  </main>
+  <script src="../js/indexFeminino.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links.mobile');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,47 +1,65 @@
 # Arquitetura da solução
 
-O software é estruturado em três componentes principais: Front-end, Back-end e Banco de Dados, que trabalham de forma integrada para oferecer a solução completa.
+<span style="color:red">Pré-requisitos: <a href="04-Projeto-interface.md"> Projeto de interface</a></span>
 
->  O Front-end é responsável pela interface com o usuário, permitindo interação e visualização das informações.
+Defina como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.  
 
->  O Back-end gerencia a lógica da aplicação, processa requisições, aplica regras de negócio e se comunica com o banco de dados.
-
->  O Banco de Dados armazena de forma persistente os dados da aplicação, garantindo segurança e integridade das informações. 
-
-A imagem abaixo apresenta a visão estrutural do sistema, mostrando como esses componentes estão organizados, se comunicam entre si e onde estão hospedados.
+Apresente um diagrama que ilustre a visão estrutural do sistema, mostrando como os componentes (front-end, back-end, banco de dados, serviços externos etc.) se organizam e se comunicam, bem como onde estão hospedados.  
 
 ![Arquitetura da Solução](images/ESTRUTURA_DO_SISTEMA.png)
 
 ## Diagrama de classes
 
-O diagrama de classes abaixo ilustra graficamente a estrutura do software e como cada uma das classes estará interligada. Essas classes servem de modelo para materializar os objetos que serão executados na memória.
+O diagrama de classes ilustra graficamente a estrutura do software e como cada uma das classes estará interligada. Essas classes servem de modelo para materializar os objetos que serão executados na memória.
 
 <img src="images/DIAGRAMA_DE_CLASSE.png" alt="diagramadeclasse"/>
 
+Elabore o diagrama de classes utilizando uma ferramenta de modelagem apropriada.
+
+> **Links úteis**:
+> - [Diagramas de classes - documentação da IBM](https://www.ibm.com/docs/pt-br/rational-soft-arch/9.7.0?topic=diagrams-class)
+> - [O que é um diagrama de classe UML?](https://www.lucidchart.com/pages/pt/o-que-e-diagrama-de-classe-uml)
+
 ##  Modelo de dados
 
-O desenvolvimento da solução requer bases de dados confiáveis, que possibilitem o cadastro, controle e recuperação dos dados necessários para os processos da aplicação, garantindo integridade e consistência das informações e permitindo a integração eficiente entre o front-end e o back-end.
+O desenvolvimento da solução proposta requer a existência de bases de dados que permitam realizar o cadastro de dados e os controles associados aos processos identificados, assim como suas recuperações.
 
 ### Modelo conceitual 
 
-A seguir, apresenta-se o Diagrama Entidade-Relacionamento (DER), elaborado na notação Peter Chen, que ilustra de forma clara como as entidades do sistema se conectam entre si. O modelo inclui atributos, relacionamentos e cardinalidades, garantindo uma base de dados integrada capaz de suportar todos os processos mapeados.
+O Diagrama Entidade-Relacionamento (DER), em notação Peter Chen, representa de forma conceitual como as entidades (objetos ou conceitos do minimundo) se relacionam entre si. O DER deve incluir entidades, atributos, relacionamentos, cardinalidade, conforme as regras do minimundo. Deve ser elaborado um único DER que suporte todos os processos mapeados, de modo a garantir uma base de dados integrada. O modelo também deve representar, quando aplicável, o controle de acesso dos usuários (partes interessadas nos processos) de acordo com os papéis definidos nos modelos de processo de negócio.
 
+Elabore o modelo utilizando uma ferramenta de modelagem apropriada.
 
 <img src="images/DER.png" alt="modelo conceitual"/>
+---
+
+> **Links úteis**:
+> - [Notação de Peter Chen para modelagem conceitual de banco de dados](https://www.youtube.com/watch?v=_y31cFi_ByY)
+> - [Como fazer um diagrama entidade-relacionamento](https://www.lucidchart.com/pages/pt/como-fazer-um-diagrama-entidade-relacionamento)
 
 ### Modelo relacional
 
-O Modelo Relacional organiza os dados em tabelas (relações), compostas por linhas (tuplas) e colunas (atributos), incluindo chaves primárias, chaves estrangeiras e demais restrições de integridade. A figura a seguir apresenta o modelo “pé de galinha” elaborado no MySQL Workbench, que reflete a estrutura relacional do sistema e suas conexões entre as entidades.
+O modelo relacional corresponde à representação dos dados, organizando as informações em tabelas (relações) compostas por linhas (tuplas) e colunas (atributos), juntamente com as restrições de integridade, chaves primárias e chaves estrangeiras.
 
-<img src="images/MODELO_RELACIONAL.png" alt="modelo relacional"/>
+Elabore o modelo utilizando uma ferramenta de modelagem apropriada.
+
+<img src="images/modelo_relacional.PNG" alt="modelo relacional"/>
+---
+
+> **Links úteis**:
+> - [Criando um modelo relacional - documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/12.0.0?topic=designer-creating-relational-model)
+> - [Como fazer um modelo relacional](https://www.youtube.com/watch?v=DWWIREUkxOI)
+
 
 ### Modelo físico
 
-A seguir, apresenta-se o script SQL responsável pela criação das tabelas do banco de dados, incluindo definições de atributos, chaves primárias, chaves estrangeiras e demais restrições de integridade, conforme o modelo relacional definido anteriormente.
+Insira aqui o script de criação das tabelas do banco de dados.
+
+Veja um exemplo:
 
 ```sql
 CREATE TABLE Pessoa (
-    idpessoa INT PRIMARY KEY,
+    cpf VARCHAR(14) PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     telefone VARCHAR(20),
     senha VARCHAR(30) NOT NULL,
@@ -49,47 +67,46 @@ CREATE TABLE Pessoa (
 );
 
 CREATE TABLE Doador (
-    iddoador INT PRIMARY KEY,
+    cpf VARCHAR(14) PRIMARY KEY,
     roupasdoadas INT DEFAULT 0,
-    FOREIGN KEY (iddoador) REFERENCES Pessoa(idpessoa)
+    FOREIGN KEY (cpf) REFERENCES Pessoa(cpf)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
 
 CREATE TABLE Receptor (
-    idreceptor INT PRIMARY KEY,
+    cpf VARCHAR(14) PRIMARY KEY,
     roupasrecebidas INT DEFAULT 0,
-    FOREIGN KEY (idreceptor) REFERENCES Pessoa(idpessoa)
+    FOREIGN KEY (cpf) REFERENCES Pessoa(cpf)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
 
 CREATE TABLE ONG (
-    idong INT PRIMARY KEY,
+    cpf VARCHAR(14) PRIMARY KEY,
     rua VARCHAR(100) NOT NULL,
     estado VARCHAR(50) NOT NULL,
     cep VARCHAR(10) NOT NULL,
     numero INT NOT NULL,
     bairro VARCHAR(50) NOT NULL,
-    FOREIGN KEY (idong) REFERENCES Pessoa(idpessoa)
+    FOREIGN KEY (cpf) REFERENCES Pessoa(cpf)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
 
 CREATE TABLE Roupas (
     idroupa INT AUTO_INCREMENT PRIMARY KEY,
-    iddoador INT NOT NULL,
+    cpf VARCHAR(14) NOT NULL,
     descricao VARCHAR(200) NOT NULL,
     tamanho VARCHAR(10),
     genero VARCHAR(20) NOT NULL,
     imagem VARCHAR(255) NOT NULL,
-    tipo VARCHAR(20) NOT NULL,
-    cor VARCHAR(15) NOT NULL,
-    FOREIGN KEY (iddoador) REFERENCES Doador(iddoador)
+    FOREIGN KEY (cpf) REFERENCES Doador(cpf)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 );
 ```
+Esse script deverá ser incluído em um arquivo .sql na pasta [de scripts SQL](../src/db).
 
 
 ## Tecnologias
@@ -119,21 +136,19 @@ A hospedagem e o lançamento da plataforma foram realizados com uma estratégia 
 A decisão de centralizar a hospedagem na Vercel foi tomada para garantir agilidade no desenvolvimento e alto desempenho. Em vez de utilizar serviços separados para front-end e back-end, adotamos uma arquitetura unificada.
 
 Front-end: A interface da plataforma, construída com React, é hospedada na Vercel, aproveitando sua rede de entrega de conteúdo (CDN) global, que garante o carregamento rápido das páginas para usuários em qualquer lugar.
-
 Back-end: A lógica de negócio, incluindo o processamento de doações e a interação com o banco de dados, é gerenciada por Serverless Functions (Funções sem Servidor), também hospedadas na Vercel. Esse modelo executa o código do back-end apenas quando uma requisição é necessária, o que otimiza recursos e custos.
 
 **Processo de Lançamento (Deploy)**
 
 O processo de lançamento é totalmente automatizado e vinculado ao nosso repositório no GitHub.
 
-Deploy Contínuo: A Vercel está configurada para monitorar a branch principal do projeto. Sempre que uma alteração é enviada para o código, a Vercel inicia automaticamente o processo de compilação e publicação. Isso garante que as atualizações cheguem ao ar de forma rápida e segura.    
-
+Deploy Contínuo: A Vercel está configurada para monitorar a branch principal do projeto. Sempre que uma alteração é enviada para o código, a Vercel inicia automaticamente o processo de compilação e publicação. Isso garante que as atualizações cheguem ao ar de forma rápida e segura.
 Ambientes de Preview: Para cada nova funcionalidade em desenvolvimento, a Vercel cria um ambiente de visualização com uma URL exclusiva. Isso permite que a equipe ou as partes interessadas testem as novas funcionalidades em um ambiente real antes de serem lançadas para o público.
 Essa metodologia de hospedagem simplificou o fluxo de trabalho e garantiu que o foco principal pudesse ser a evolução da plataforma, em vez da gestão da infraestrutura.
 
 ## Qualidade de software
 
-Com base nas necessidades específicas do nosso projeto de plataforma de doações, o time de desenvolvimento elegeu um conjunto de subcaracterísticas de qualidade como guias para nortear o processo de criação. A escolha dessas características foi estratégica, visando garantir que o produto final seja seguro, confiável e, acima de tudo, eficiente para os usuários.
+Com base na norma ISO/IEC 25010 e nas necessidades específicas do nosso projeto de plataforma de doações, o time de desenvolvimento elegeu um conjunto de subcaracterísticas de qualidade como guias para nortear o processo de criação. A escolha dessas características foi estratégica, visando garantir que o produto final seja seguro, confiável e, acima de tudo, eficiente para os usuários.
 A seguir, apresentamos as subcaracterísticas escolhidas, suas justificativas no contexto da nossa plataforma de doações e as métricas que serão utilizadas para sua avaliação.
 Características e Métricas de Qualidade
 
