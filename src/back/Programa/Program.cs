@@ -25,13 +25,7 @@ app.UseCors("AllowAll");
 app.UseSwagger();
 app.UseSwaggerUI();
 
-string connectionString = "Server=mysql-e51083d-doaaqui.k.aivencloud.com;" +
-                          "Port=26584;" + 
-                          "Database=doaaquiDB;" +
-                          "User ID=avnadmin;" +
-                          "Password=AVNS_nIqBD4P6y_dcBlXxHZO;" +
-                          "SslMode=Required;" +
-                          "SslCa=ca.pem;";
+string connectionString = " ";
 
 // GET /TestarConexao
 app.MapGet("/TestarConexao", async () =>

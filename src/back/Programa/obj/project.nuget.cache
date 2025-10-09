@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xgIJiU9Pj1w=",
+  "dgSpecHash": "cHv8WoXqzc8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\2025-2-p3-tidai-doacaoroupa\\src\\back\\Programa\\Programa.csproj",
+  "projectFilePath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\DOA-AQUI\\src\\back\\Programa\\Programa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
