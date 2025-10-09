@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite this software using these metadata."
+title: DoaAqui
+authors:
+  - family-names: Souza Carvalho
+    given-names: Arthur
+  - family-names: Alves Oliveira Silva
+    given-names: Arthur
+  - family-names: Rodrigues Cordeiro Junior
+    given-names: Adenilson
+  - family-names: Henrique de Jesus Souza
+    given-names: Lucas
+  - family-names: Gustavo de Oliveira Silva
+    given-names: Raphael
+  - family-names: Fillipe da Silva
+    given-names: Jardell
+    name-suffix: "Professor"
+    affiliation: PUC Minas
+keywords:
+    - doar
+    - doação
+    - roupa
+repository-code: https://github.com/ICEI-PUC-Minas-PBE-ADS-SI/2025-2-p3-tidai-doaqui
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-09-01
