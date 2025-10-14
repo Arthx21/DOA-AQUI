@@ -1,29 +1,34 @@
 # Introdução
 
-&emsp;O projeto propõe o desenvolvimento de uma plataforma digital para doações de roupas, com o objetivo de conectar de forma prática, segura e acessível pessoas que desejam doar, indivíduos em situação de vulnerabilidade que precisam receber e organizações sociais que atuam como mediadoras. A iniciativa surge da dificuldade enfrentada tanto por doadores, que não encontram meios simples e confiáveis para contribuir, quanto por receptores, que têm pouco acesso a doações organizadas. Além de incentivar a solidariedade e gerar impacto positivo na comunidade, o projeto também permite ao grupo aplicar conhecimentos de desenvolvimento de sites em um contexto real.
+No Brasil, o desperdício de roupas é alarmante: estima-se que cerca de 4 milhões de toneladas de resíduos têxteis sejam descartadas anualmente, representando aproximadamente 5% de todos os resíduos sólidos urbanos do país. Esse cenário é agravado pela escassez de canais eficientes que conectem doadores, receptores e organizações sociais, resultando em oportunidades de solidariedade não aproveitadas.  
+[Fonte: CNN Brasil](https://www.cnnbrasil.com.br/economia/macroeconomia/brasil-descarta-mais-de-4-milhoes-de-toneladas-de-residuos-texteis-por-ano/?utm_source=chatgpt.com)
+
+Este projeto propõe o desenvolvimento de uma plataforma digital que facilite a doação de roupas, conectando de forma prática, segura e acessível pessoas dispostas a doar, indivíduos em situação de vulnerabilidade que necessitam de roupas e organizações sociais que atuam como mediadoras. A iniciativa visa superar as dificuldades enfrentadas por doadores e receptores, promovendo a solidariedade e gerando impacto positivo na comunidade, além de proporcionar ao grupo a aplicação de conhecimentos de desenvolvimento de sites em um contexto real.
 
 ## Problema
-&emsp;Hoje em dia, muitas pessoas querem doar roupas que já não usam mais, mas encontram dificuldades para saber onde e como fazer isso. Ao mesmo tempo, pessoas e famílias que precisam dessas roupas nem sempre conseguem ter acesso a elas de forma rápida. Falta uma forma simples e prática de aproximar doadores, receptores e organizações sociais.
+
+Apesar da vontade de contribuir, muitos indivíduos enfrentam desafios para identificar meios simples e confiáveis de doar roupas. Simultaneamente, pessoas e famílias em situação de vulnerabilidade têm acesso limitado a doações organizadas, carecendo de canais eficientes que conectem essas necessidades às ofertas disponíveis.
 
 ## Objetivos
 
-&emsp;Criar um site de doações que conecte pessoas dispostas a ajudar com instituições que precisam de apoio, de forma prática, segura e acessível.
-Os três objetivos específicos para este trabalho é:
->  - Desenvolver um espaço fácil de usar para doadores e instituições.
->  - Estimular a solidariedade por meio da tecnologia.
->  - Passar confiança e transparência para quem deseja contribuir.
- 
+O objetivo principal deste projeto é criar um site de doações que conecte pessoas dispostas a ajudar com instituições que precisam de apoio, de forma prática, segura e acessível. Os objetivos específicos são:
+
+- Desenvolver uma interface intuitiva para doadores e instituições.
+- Incentivar a solidariedade por meio da tecnologia.
+- Garantir confiança e transparência para os participantes.
 
 ## Justificativa
 
-&emsp;A ideia de criar um site de doações surgiu da percepção da importância de aproximar pessoas dispostas a ajudar de quem realmente precisa. Muitas vezes, quem deseja contribuir enfrenta dificuldades para encontrar um meio simples, confiável e transparente de fazê-lo, enquanto as instituições sem fins lucrativos lutam para divulgar suas campanhas de forma eficaz. Como consequência, diversas doações deixam de acontecer seja pela falta de visibilidade, pela fragmentação das estratégias de comunicação ou pela ausência de canais digitais otimizados.
-&emsp;Diversos estudos destacam os desafios enfrentados pelas organizações nessa área. Segundo um artigo do Economato, ONGs com equipes pequenas, escassez de recursos e falta de experiência em comunicação frequentemente recorrem a estratégias fragmentadas e de curto prazo, dificultando a consolidação de campanhas consistentes e de longo alcance. Essas limitações comprometem a otimização dos canais digitais e a amplificação das suas causas
+A criação deste site de doações surge da necessidade de aproximar aqueles que desejam ajudar das pessoas que realmente necessitam. Diversos estudos destacam os desafios enfrentados pelas organizações sociais na divulgação eficaz de suas campanhas. Por exemplo, uma pesquisa revelou que apenas 20% dos resíduos têxteis no Brasil são reciclados ou reaproveitados, evidenciando a falta de canais eficientes para a gestão de doações.  
+[Fonte: Veja](https://veja.abril.com.br/agenda-verde/lixo-textil-descarte-de-roupas-usadas-cresce-e-vira-um-enorme-problema-ambiental/?utm_source=chatgpt.com)
 
-> **Referência**:
-> -ECONOMATO. Comunicação eficaz em causas sociais. Disponível em: [ECONOMATO](https://economato.com.br/comunicacao-eficaz-em-causas-sociais/).
-
+Além disso, dados do IBGE indicam que em 2023, 8,7 milhões de pessoas saíram da pobreza no país, mas ainda existem milhões em situação de vulnerabilidade que carecem de apoio.  
+[Fonte: Governo do Brasil](https://www.gov.br/secom/pt-br/assuntos/noticias/2024/12/ibge-em-2023-8-7-milhoes-de-pessoas-deixaram-pobreza-e-extrema-pobreza?utm_source=chatgpt.com)
 
 ## Público-alvo
 
-&emsp;O público-alvo do projeto são pessoas que desejam doar ou receber roupas de forma prática, segura e organizada. Entre os doadores, estão aqueles que têm roupas em bom estado e querem ajudar pessoas em situação de vulnerabilidade, sem precisar se deslocar ou lidar com processos complicados. Entre os receptores, estão pessoas de todas as idades que precisam de roupas, buscando uma forma confiável de conseguir doações.
+O público-alvo deste projeto inclui:
 
+- **Doadores**: Pessoas que desejam contribuir com roupas em bom estado.
+- **Receptores**: Indivíduos e famílias em situação de vulnerabilidade que necessitam de roupas.
+- **Organizações sociais**: Instituições responsáveis por cadastrar pontos de coleta e mediar as doações.

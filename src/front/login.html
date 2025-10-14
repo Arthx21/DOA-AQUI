@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - DoaAqui</title>
+  <link rel="stylesheet" href="css/loginstyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="cabecalho">
+    <div class="topo">
+       <button class="btn-voltar" onclick="history.back()"></button>
+      <img src="images/logo2.png" class="logo">
+    </div>
+    <hr class="linha-separadora">
+  </header>
+
+  <h1>Entrar no DoaAqui</h1>
+  <h3>Fique a vontade a casa é sua.</h3>
+
+  <p class="email"> Email:</p>
+  <form>
+    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+    <p class="senha"> Senha:</p>
+    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+    <a href="EsqueciMinhaSenha.html" class="esqueci-senha">Esqueci a senha</a>
+
+    <button type="submit" class="btn entrar">Entrar</button>
+    <a href="cadastro.html"><button type="button" class="btn criar-conta">Criar conta</button></a>
+
+  </form>
+
+  <script src="js/login.js"></script>
+</body>
+
+</html>

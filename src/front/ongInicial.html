@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sua ONG - DoaAqui</title>
+    <link rel="stylesheet" href="css/ongInicial.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Banner Verde -->
+    <header>
+
+        <!-- Barra de Navegação -->
+        <nav class="navbar">
+            <div class="logo"><a href="doadorinicial.html"><img src="images/logo.png" alt="logo"></a></div>
+
+            <div class="user-info">
+                <button>Editar ponto de coleta</button>
+                <i class="fa fa-user"></i>
+                <span id="nome-usuario"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Introdução motivadora -->
+        <section class="intro">
+            <h1>Bem-vindo(a) à sua ONG!</h1>
+            <p>Aqui você pode visualizar roupas pendentes e registrar aquelas que deseja disponibilizar para quem
+                precisa.
+                Cada ação ajuda a transformar vidas e espalhar solidariedade.</p>
+        </section>
+
+        <!-- Roupas pendentes da ONG -->
+        <section class="pendentes">
+            <h2>Roupas Pendentes</h2>
+            <div id="carrossel-pendentes" class="carrossel"></div>
+        </section>
+
+        <section class="disponiveis">
+            <h2>Roupas Disponiveis</h2>
+            <div id="carrossel-disponiveis" class="carrossel"></div>
+        </section>
+
+        <section class="doadas">
+            <h2>Roupas Doadas</h2>
+            <div id="carrossel-doadas" class="carrossel"></div>
+        </section>
+    </main>
+
+
+    <!-- Modal para editar endereço -->
+    <div id="modal-endereco" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModalEndereco()">&times;</span>
+            <h2>Editar Endereço da ONG</h2>
+            <form id="form-endereco">
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua" required>
+
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+
+                <label for="estado">Bairro:</label>
+                <input type="text" id="bairro" name="bstado" required>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal de detalhes da roupa -->
+    <div id="modal-roupa" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModalRoupa()">&times;</span>
+            <h2>Detalhes da Roupa</h2>
+            <img id="detalhe-foto" src="" alt="Imagem da roupa">
+            <p><strong>Tipo:</strong> <span id="detalhe-tipo"></span></p>
+            <p><strong>Cor:</strong> <span id="detalhe-cor"></span></p>
+            <p><strong>Tamanho:</strong> <span id="detalhe-tamanho"></span></p>
+            <p><strong>Descrição:</strong> <span id="detalhe-descricao"></span></p>
+            <p><strong>Status:</strong> <span id="detalhe-status"></span></p>
+        </div>
+    </div>
+
+
+    <script src="js/ongInicial.js"></script>
+</body>
+
+</html>

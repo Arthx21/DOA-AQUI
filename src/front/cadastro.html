@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta - DoaAqui</title>
+  <link rel="stylesheet" href="css/cadastrostyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="cabecalho">
+    <div class="topo">
+      <button class="btn-voltar" onclick="history.back()"></button>
+      <img src="images/logo2.png" class="logo">
+    </div>
+    <hr class="linha-separadora">
+  </header>
+
+  <h1>Criar conta no DoaAqui</h1>
+  <h3>Fique à vontade, a casa é sua.</h3>
+
+  <div class="botoes-tipo">
+    <button class="btn-tipo ativo" onclick="mudarFormulario('doador', this)">Doador</button>
+    <button class="btn-tipo" onclick="mudarFormulario('receptor', this)">Receptor</button>
+    <button class="btn-tipo" onclick="mudarFormulario('ong', this)">ONG</button>
+  </div>
+
+  <div class="formulario-container">
+
+  <!-- DOADOR -->
+  <form id="form-doador" class="formulario ativo">
+    <p>Nome completo:</p>
+    <input id="nome-doador" type="text" placeholder="Digite seu nome completo" required>
+
+    <p>Telefone:</p>
+    <input id="telefone-doador" type="tel" placeholder="(99) 99999-9999"
+      pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+      title="Digite um telefone válido, ex: (31) 91234-5678" required>
+
+    <p>Email:</p>
+    <input id="email-doador" type="email" placeholder="Digite seu email" required>
+
+    <p>Senha:</p>
+    <input id="senha-doador" type="password" placeholder="Digite sua senha"
+      minlength="6" title="A senha deve ter pelo menos 6 caracteres" required>
+
+    <p>Confirmar senha:</p>
+    <input id="confirmar-doador" type="password" placeholder="Confirme sua senha"
+      minlength="6" required>
+
+    <button type="submit" class="btn feito">Feito</button>
+  </form>
+
+  <!-- RECEPTOR -->
+  <form id="form-receptor" class="formulario">
+    <p>Nome completo:</p>
+    <input id="nome-receptor" type="text" placeholder="Digite seu nome completo" required>
+
+    <p>Telefone:</p>
+    <input id="telefone-receptor" type="tel" placeholder="(99) 99999-9999"
+      pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+      title="Digite um telefone válido, ex: (31) 91234-5678" required>
+
+    <p>Email:</p>
+    <input id="email-receptor" type="email" placeholder="Digite seu email" required>
+
+    <p>Senha:</p>
+    <input id="senha-receptor" type="password" placeholder="Digite sua senha"
+      minlength="6" title="A senha deve ter pelo menos 6 caracteres" required>
+
+    <p>Confirmar senha:</p>
+    <input id="confirmar-receptor" type="password" placeholder="Confirme sua senha"
+      minlength="6" required>
+
+    <button type="submit" class="btn feito">Feito</button>
+  </form>
+
+  <!-- ONG -->
+  <form id="form-ong" class="formulario">
+    <div class="form-grid-ong">
+      <div class="campo">
+        <input id="nome-ong" type="text" placeholder="Nome completo" required>
+      </div>
+      <div class="campo">
+        <input id="email-ong" type="email" placeholder="Email" required>
+      </div>
+      <div class="campo">
+        <input id="telefone-ong" type="tel" placeholder="(99) 99999-9999"
+          pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$"
+          title="Digite um telefone válido, ex: (31) 91234-5678" required>
+      </div>
+      <div class="campo">
+        <input id="senha-ong" type="password" placeholder="Senha"
+          minlength="6" title="A senha deve ter pelo menos 6 caracteres" required>
+      </div>
+      <div class="meio">
+        <input id="confirmar-ong" type="password" placeholder="Confirmar senha"
+          minlength="6" required>
+      </div>
+
+      <div class="endereco-label">Informações da ONG</div>
+
+      <div class="campo">
+        <input id="nomedaong-ong" type="text" placeholder="Nome da ONG" required>
+      </div>
+
+      <div class="campo">
+        <input id="bairro-ong" type="text" placeholder="Bairro" required>
+      </div>
+      <div class="campo">
+        <input id="estado-ong" type="text" placeholder="Estado" required>
+      </div>
+      <div class="campo">
+        <input id="rua-ong" type="text" placeholder="Rua" required>
+      </div>
+      <div class="campo">
+        <input id="cidade-ong" type="text" placeholder="Cidade" required>
+      </div>
+      <div class="campo">
+        <input id="numero-ong" type="text" placeholder="Número" required>
+      </div>
+
+      <div class="botao-container">
+        <button type="submit" class="btn feito">Feito</button>
+      </div>
+    </div>
+  </form>
+
+</div>
+
+
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

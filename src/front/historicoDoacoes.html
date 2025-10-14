@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Histórico-Doações</title>
+    <link rel="stylesheet" href="css/historicoDoacoes.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Banner Verde -->
+    <header>
+
+        <!-- Barra de Navegação -->
+        <nav class="navbar">
+            <div class="logo"><a href="doadorinicial.html"><img src="images/logo.png" alt="Camiseta cinza GG masculina"></a></div>
+
+            <div class="user-info">
+                <i class="fa fa-user"></i>
+                <span id="nome-usuario"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+
+    <main>
+        <main>
+            <div id="modal-editar" class="modal">
+                <div class="modal-content">
+                    <span class="fechar" onclick="fecharModal()">&times;</span>
+                    <h2>Editar Roupa</h2>
+                    <form id="form-editar">
+                        <input type="hidden" id="editar-id">
+
+                        <label>Tipo:</label>
+                        <input type="text" id="editar-tipo" required>
+
+                        <label>Cor:</label>
+                        <input type="text" id="editar-cor" required>
+
+                        <label>Tamanho:</label>
+                        <input type="text" id="editar-tamanho" required>
+
+                        <label>Descrição:</label>
+                        <textarea id="editar-descricao" rows="3"></textarea>
+
+                        <button type="submit" class="btn-salvar">Salvar Alterações</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Roupas Pendentes -->
+            <section class="categoria">
+                <h2>Pendentes (Aguardando recebimento na ONGs)</h2>
+                <div class="carrossel-container">
+                    <button class="seta esquerda" onclick="rolar('pendente', -220)">&#10094;</button>
+                    <div class="carrossel" id="carrossel-pendente"></div>
+                    <button class="seta direita" onclick="rolar('pendente', 220)">&#10095;</button>
+                </div>
+            </section>
+
+            <!-- Roupas Disponíveis -->
+            <section class="categoria">
+                <h2>Disponíveis (Já registrada na ONGs)</h2>
+                <div class="carrossel-container">
+                    <button class="seta esquerda" onclick="rolar('disponivel', -220)">&#10094;</button>
+                    <div class="carrossel" id="carrossel-disponivel"></div>
+                    <button class="seta direita" onclick="rolar('disponivel', 220)">&#10095;</button>
+                </div>
+            </section>
+
+            <!-- Roupas Doadas -->
+            <section class="categoria">
+                <h2>Doadas</h2>
+                <div class="carrossel-container">
+                    <button class="seta esquerda" onclick="rolar('doado', -220)">&#10094;</button>
+                    <div class="carrossel" id="carrossel-doado"></div>
+                    <button class="seta direita" onclick="rolar('doado', 220)">&#10095;</button>
+                </div>
+            </section>
+        </main>
+
+
+    </main>
+
+
+    <script src="js/historicoDoacoes.js"></script>
+</body>
+
+</html>

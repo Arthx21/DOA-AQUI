@@ -1,0 +1,251 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  font-family: "Tomorrow", sans-serif;
+  background-color: #f4f4f4;
+}
+
+
+/* Barra de navegação */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Garante que o conteúdo não fique escondido atrás do menu */
+body {
+  margin-top: 100px;
+  /* ajusta conforme a altura do seu menu */
+}
+
+.logo {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.logo span {
+  color: #0073e6;
+}
+
+.search-bar {
+  flex: 1;
+  margin: 0 20px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  max-width: 400px;
+  background-color: #94cdff;
+}
+
+/* Ícone do menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #1E88E5;
+  padding-right: 15px;
+}
+
+/* Links do menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  /* padrão desktop */
+  gap: 100px;
+  margin: 20px;
+  padding: 0;
+  padding-right: 20px;
+}
+
+.nav-links.mobile {
+  display: none;
+  /* escondido por padrão */
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-left: 35px;
+  gap: 25px;
+}
+
+.nav-links.mobile.active {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #1E88E5 !important;
+  font-weight: bold;
+}
+
+/* Conteúdo */
+main {
+  padding: 30px 20px;
+  padding-top: 0;
+  height: calc(100vh - 120px);
+  /* 120px = altura do banner + navbar */
+  overflow-y: auto;
+  /* esconde a barra de rolagem vertical */
+  overflow-x: hidden;
+  /* esconde a barra de rolagem horizontal */
+  box-sizing: border-box;
+}
+
+
+.categoria {
+  padding-bottom: 30px;
+  max-height: 320px;
+}
+
+.categoria h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 22px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+/* Lista de roupas */
+.roupas {
+  max-height: 300px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow-x: hidden;
+  /* esconde a barra de rolagem */
+  scroll-behavior: smooth;
+  /* rolagem suave */
+  padding: 10px;
+  position: relative;
+  /* garante que os botões fiquem relativos */
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.seta.esquerda {
+  left: 5px;
+}
+
+.seta.direita {
+  right: 5px;
+}
+
+.item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  overflow-y: none;
+
+  flex: 0 0 auto;
+  width: 200px;
+  height: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#tituloOng {
+  margin-left: 20px;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Padronizar imagens */
+.item img {
+  width: 100%;
+  height: 180px;
+  /* todas iguais */
+  object-fit: cover;
+  /* corta a imagem para caber */
+  border-radius: 4px;
+}
+
+/* Padronizar texto */
+.item p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.2em;
+  height: 75px;
+  /* garante que todos os textos ocupem o mesmo espaço */
+  overflow: hidden;
+  /* corta excesso caso o texto seja muito grande */
+  text-overflow: ellipsis;
+}
+
+/* Container dos itens */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  /* centraliza sempre */
+}
+
+/* Imagens padronizadas */
+.item img {
+  width: 100%;
+  height: 180px;
+  /* todas ficam na mesma altura */
+  object-fit: contain;
+  /* mantém proporção sem cortar */
+  margin-bottom: 10px;
+}
+
+/* Texto padronizado */
+.item p {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* Quando a tela ficar menor que 1024px (tablet) */
+@media (max-width: 1220px) {
+  .nav-links {
+    display: none;
+    /* esconde links padrão */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* mostra o ícone */
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Roupas - DoaAqui</title>
+    <link rel="stylesheet" href="css/cadastroRoupa.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="topo">
+            <button class="btn-voltar" onclick="history.back()"></button>
+            <img src="images/logo2.png" class="logo">
+        </div>
+        <hr class="linha-separadora">
+    </header>
+
+    <h1>Cadastro de Roupas</h1>
+    <h3>Cadastre suas doações de forma rápida e fácil.</h3>
+
+    <div class="formulario-container">
+
+        <form id="formRoupa" class="formulario ativo">
+
+            <div class="campo">
+                <div id="escolher-ong">
+                    <select id="idong" required>
+                        <option value="" disabled selected>Selecione a Instituição</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="campo">
+                <input type="text" id="tipo" placeholder="Tipo da roupa" required>
+            </div>
+
+            <div class="campo">
+                <input type="text" id="cor" placeholder="Cor" required>
+            </div>
+
+            <div class="campos-lado">
+                <div class="campo">
+                    <select id="tamanho" required>
+                        <option value="" disabled selected>Selecione o tamanho</option>
+                        <option value="PP">PP</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                        <option value="Único">Único</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <select id="genero" required>
+                        <option value="" disabled selected>Selecione o gênero</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Feminino">Feminino</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="campo">
+                <textarea id="descricao" placeholder="Descrição" style="height: 70px; width: 400px;"></textarea>
+            </div>
+
+            <div class="campo-imagem">
+                <label for="imagem" class="botao-imagem">
+                    <span class="circulo">+</span> Imagem
+                </label>
+                <input type="file" id="imagem" accept="image/*">
+            </div>
+
+
+            <div class="botao-container">
+                <button type="submit" class="btn feito">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/cadastroRoupa.js"></script>
+
+</body>
+
+</html>

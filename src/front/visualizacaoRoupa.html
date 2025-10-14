@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualizacao-Roupa</title>
+  <link rel="stylesheet" href="css/visualizacaoRoupa.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar">
+      <div class="logo"><a href="receptorinicial.html"><img src="images/logo.png" alt="logo"></a></div>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      <ul class="nav-links mobile">
+        <li><a href="indexMasculino.html">Masculino</a></li>
+        <li><a href="indexFeminino.html">Feminino</a></li>
+        <li><a href="MapaONG.html">ONGs</a></li>
+      </ul>
+      <ul class="nav-links">
+        <li><a href="indexMasculino.html">Masculino</a></li>
+        <li><a href="indexFeminino.html">Feminino</a></li>
+        <li><a href="MapaONG.html">ONGs</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="conteudo-produto" id="pagina-item">
+  <div class="container-produto">
+    <div class="coluna-esquerda">
+      <img src="" alt="Camisa social masculina">
+      <div class="info-doador">
+        <p><strong>Doador:</strong></p>
+        <p><strong>Telefone:</strong></p>
+        <p><strong>E-mail:</strong></p>
+      </div>
+    </div>
+
+    <div class="coluna-direita">
+      <h2></h2>
+      <p><strong></strong></p>
+      <p><strong></strong></p>
+      <p><strong>Descrição:</strong></p>
+      <p class="descricao"> </p>
+        <div class="btn-reserv"></div>
+    </div>
+  </div>
+</main>
+
+  <script src="js/visualizacaoRoupa.js"></script>
+  <script>  
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links.mobile');
+      navLinks.classList.toggle('active');  // alterna visibilidade
+    }
+  </script>
+</body>
+
+</html>

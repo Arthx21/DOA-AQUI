@@ -1,0 +1,181 @@
+body {
+  font-family: 'Tomorrow', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+    font-family: 'Tomorrow', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3 {
+    font-family: 'Tomorrow', sans-serif;
+    text-align: center;
+    margin-top: -15px;
+    font-weight: normal;
+
+}
+
+.logo {
+    display: block;        /* transforma em bloco */
+    margin: -45px auto 0;  /* centraliza horizontalmente e aplica margin-top */
+    width: 300px;
+    height: auto;
+}
+
+.topo {
+    margin: 0 0 0 0;
+}
+
+.linha-separadora {
+    width: 100%;
+    border: 0px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: 30px;
+}
+
+.email {
+    font-family: 'Tomorrow', sans-serif;
+    text-align: center;
+    margin-top: 23px;
+    font-size: 15px;
+}
+
+#email:hover {
+    background-color: #8BFACC;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.formulario :placeholder-shown {
+  text-align: center;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+input[type="email"] {
+    padding: 10px;
+    /* espaço interno */
+    border: 2px solid #ffffff;
+    /* borda */
+    border-radius: 20px;
+    /* borda arredondada */
+    width: 400px;
+    /* largura da caixa */
+    font-size: 16px;
+    text-align: center;
+    background-color: #9BDFFF;
+    margin-top: -10px;
+}
+
+.senha {
+    font-family: 'Tomorrow', sans-serif;
+    text-align: center;
+    margin-top: 22px;
+    font-size: 15px;
+}
+
+#senha:hover {
+    background-color: #8BFACC;
+}
+
+input[type="password"] {
+    padding: 10px;
+    /* espaço interno */
+    border: 2px solid #ffffff;
+    /* borda */
+    border-radius: 20px;
+    /* borda arredondada */
+    width: 400px;
+    /* largura da caixa */
+    font-size: 16px;
+    text-align: center;
+    background-color: #9BDFFF;
+    margin-top: -10px;
+}
+
+.btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    /* agora no canto superior esquerdo */
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+.btn-voltar::before {
+    content: "";
+    border: solid #9AFFC9;
+    /* cor da seta */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(135deg);
+    /* seta para esquerda */
+    transition: 0.3s;
+}
+
+.btn-voltar:hover::before {
+    border-color: black;
+    /* muda cor no hover */
+}
+
+
+
+.esqueci-senha {
+    display: block;
+    font-family: 'Tomorrow', sans-serif;
+    /* força ocupar linha inteira */
+    margin-top: 20px;
+    font-size: 16px;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.esqueci-senha:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 420px;
+    /* largura fixa igual no print */
+    padding: 10px;
+    /* altura consistente */
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+    /* bordas mais arredondadas */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.entrar {
+    font-family: 'Tomorrow', sans-serif;
+    background-color: #9BDFFF;
+    color: #000;
+    margin-top: 40px;
+}
+
+.criar-conta {
+    font-family: 'Tomorrow', sans-serif;
+    background-color: #8BFACC;
+    color: #000;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}

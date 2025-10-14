@@ -1,0 +1,354 @@
+html,
+body {
+  overflow: auto;
+  /* remove scroll vertical e horizontal */
+  height: 100%;
+  /* garante que o body ocupe toda a altura da tela */
+}
+
+
+
+main {
+  padding: 20px;
+  margin: 0 auto;
+  
+}
+
+/* Barra de navegação */
+.navbar {
+  position: fixed;
+  top: 1;
+  /* joga a navbar para baixo do banner (ajuste conforme a altura do banner) */
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 5px 5px;
+  box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.308);
+  z-index: 1000;
+}
+
+/* Garante que o conteúdo não fique escondido atrás do menu */
+.logo {
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo span {
+  color: #0073e6;
+}
+
+/* Ícone do menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #1E88E5;
+  padding-right: 15px;
+}
+
+/* Links do menu */
+.nav-links {
+  list-style: none;
+  display: flex;
+  /* padrão desktop */
+  gap: 80px;
+  margin: 20px;
+  padding-right: 25px;
+}
+
+.nav-links.mobile {
+  display: none;
+  /* escondido por padrão */
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding-left: 35px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  gap: 35px;
+}
+
+.nav-links.mobile.active {
+  display: flex;
+  padding: auto 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #1E88E5 !important;
+  font-weight: bold;
+}
+
+.btn-doar {
+  background-color: #89beec;
+  padding: 12px 30px;
+  border-radius: 20px;
+  color: #1E88E5 !important;
+
+}
+
+body {
+  font-family: "Tomorrow", sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.produto-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  
+}
+
+
+.produto-imagem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  object-fit: cover;
+}
+
+.produto-imagem img {
+  width: 40%;
+  max-width: 200x;
+  border-radius: 480px;
+}
+
+.produto-doador {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.produto-doador p {
+  margin: 4px 0;
+}
+
+.produto-detalhes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.produto-detalhes h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+}
+
+.produto-detalhes p {
+  margin: 4px 0;
+}
+
+.descricao {
+  margin-top: 15px;
+  color: #333;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Quando a tela ficar menor que 630px (tablet) */
+@media (max-width: 630px) {
+  .nav-links {
+    display: none;
+    /* esconde links padrão */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* mostra o ícone */
+  }
+}
+
+.conteudo-produto {
+  overflow: hidden;
+  height: 100vh;
+  max-height: 802px;
+  min-height: 715px;
+  padding-top: 130px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: left;
+  background: radial-gradient(circle, #000000, #ffffff);
+  padding-bottom: 0px;
+}
+
+.container-produto {
+  display: flex;
+  gap: 40px;
+  height: 550px;
+  width: 100%;
+  padding: 50px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+.info-doador {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.info-doador p {
+  margin: 6px 0;
+}
+
+/* Coluna da descrição */
+.coluna-direita {
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #111;
+}
+
+.coluna-direita h2 {
+  display: inline-block;
+  font-size: 2rem;
+  font-display: auto;
+  padding: 30px 20px 7px 20px;
+  border-bottom: #1a9b00 solid 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0 2px 0 #1e88e5;
+}
+
+.coluna-direita p {
+  margin: 0;
+}
+
+.coluna-direita p s {
+  background-color: #1a9b00;
+}
+
+.descricao {
+  margin-top: 20px !important;
+  color: #333;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* ----- Responsividade ----- */
+@media (max-width: 866px) {
+  .container-produto {
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    
+  }
+
+  html,
+  body {
+    overflow: auto;
+  }
+
+  .conteudo-produto {
+    height: 100%;
+    max-height: 1700px;
+    min-height: 1000px;
+    overflow: auto;
+    padding-bottom: 50px;
+  }
+
+  .coluna-direita {
+    text-align: center;
+  }
+
+  .descricao {
+    text-align: justify;
+  }
+}
+
+.coluna-esquerda {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  padding: 20px;
+}
+
+.coluna-esquerda img {
+  width: 320px !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  border-radius: 6px;
+  border: #111 solid 2px;
+  box-shadow: 0 0 5px #111;
+  overflow: hidden !important;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0px;
+  background: linear-gradient(90deg, #1a9b00, #1E88E5);
+  padding: 10px;
+}
+
+.btn-reservar {
+  margin: 25px;
+  background: linear-gradient(90deg, #1a9b00, #1E88E5);
+  padding: 20px;
+  margin-left: 0px;
+  border-radius: 10px;
+  border: solid 2px #000000;
+  display: inline-block;
+  cursor: pointer;
+  /* já aplica o pointer */
+  transition: 0.3s;
+  /* opcional, deixa o hover mais suave */
+  font-family: 'Tomorrow', sans-serif;
+  font-weight: 800;
+  height: 100%;
+}
+
+
+
+.btn-reservar:hover {
+  padding: 21px;
+}
+
+.btn-reservar a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn-reservar:hover a {
+  color: #fff;
+  /* garante contraste se quiser mudar o texto */
+}
+
+
+#pagina-item .info-doador {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#pagina-item .coluna-esquerda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#pagina-item .info-doador {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+}

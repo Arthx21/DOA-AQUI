@@ -1,3 +1,19 @@
+window.addEventListener("pageshow", () => {
+    document.querySelectorAll(".item.selecionado").forEach(item => {
+        item.classList.remove("selecionado");
+    });
+});
+
+const nome = sessionStorage.getItem("nome");
+const tipo = sessionStorage.getItem("tipo");
+const id = sessionStorage.getItem("id");
+
+// Se não houver dados (usuário não logado), redireciona
+if (!nome || !tipo || !id) {
+    window.location.href = "login.html";
+}
+
+
 const searchBar = document.querySelector(".search-bar");
 
 searchBar.addEventListener("input", () => {
@@ -47,27 +63,43 @@ function toggleMenu() {
 
 /* Back-END   */
 
-const API_URL = "http://localhost:5000"; 
+const API_URL = "http://localhost:5000";
 
 
 async function getRoupas() {
     const res = await fetch(`${API_URL}/ListarRoupa`);
+    const res2 = await fetch(`${API_URL}/ListarOng`);
+    const ongs = await res2.json();
     const data = await res.json();
 
-    const roupasPorGenero = data.reduce((grupos, roupa) => {
+    let ong = {};
+    ongs.forEach(o => {
+        ong[o.idong] = o.nomedaong;
+    });
+
+    data.forEach(r => {
+
+        r.nomedaong = ong[r.idong] || "Desconhecido";
+    });
+
+    const roupasDisponiveis = data.filter(r => 
+        r.status && r.status.toLowerCase() === "disponivel"
+    );
+
+    const roupasPorGenero = roupasDisponiveis.reduce((grupos, roupa) => {
         const genero = roupa.genero || "Outros";
-        if (!grupos[genero]) grupos[genero] = []; 
+        if (!grupos[genero]) grupos[genero] = [];
         grupos[genero].push(roupa);
         return grupos;
     }, {});
 
     const listaMasculina = document.getElementById("carrossel");
-    
+
     listaMasculina.innerHTML = roupasPorGenero["Masculino"]
         ?.map(r => `
-            <div class="item">
+            <div class="item"><a href="visualizacaoRoupa.html?id=${r.idroupa}">
                 <img src="data:image/png;base64,${r.foto}" alt="${r.descricao}">
-                <p>${r.tipo} | ${r.cor} | ${r.tamanho} | Doador: ${r.nomedoador}</p>
+                <p>${r.tipo} | ${r.cor} | ${r.tamanho} <br> ONG: ${r.nomedaong}</p></a>
             </div>
         `).join("") || "";
 

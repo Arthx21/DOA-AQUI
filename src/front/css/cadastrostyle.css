@@ -1,0 +1,221 @@
+body {
+  font-family: 'Tomorrow', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+    display: block;        /* transforma em bloco */
+    margin: -45px auto 0;  /* centraliza horizontalmente e aplica margin-top */
+    width: 300px;
+    height: auto;
+}
+
+.linha-separadora {
+
+    border: 0px;
+    height: 2px;
+    background-color: #000000;
+    margin-top: 30px;
+}
+
+
+.btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 40px;
+    /* agora no canto superior esquerdo */
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 35px;
+}
+
+.btn-voltar::before {
+    content: "";
+    border: solid #9AFFC9;
+    /* cor da seta */
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(135deg);
+    /* seta para esquerda */
+    transition: 0.3s;
+}
+
+.btn-voltar:hover::before {
+    border-color: black;
+    /* muda cor no hover */
+}
+
+
+h1 { 
+  font-family: 'Tomorrow', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h3 {
+  font-family: 'Tomorrow', sans-serif;
+  text-align: center;
+  margin-top: -10px;
+  font-weight: normal;
+}
+
+.botoes-tipo {
+  font-family: 'Tomorrow', sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-tipo {
+  font-family: 'Tomorrow', sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #CBFFE9;
+}
+
+.btn-tipo.ativo {
+  background-color: #8BFACC;
+}
+
+.formulario-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.formulario {
+  display: none;
+  font-family: 'Tomorrow', sans-serif;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario :placeholder-shown {
+  text-align: center;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.formulario.ativo {
+  font-family: 'Tomorrow', sans-serif;
+  display: flex;
+}
+
+form p {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+form input {
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  width: 400px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #9BDFFF;
+}
+
+form input:hover 
+{
+  background-color: #8BFACC;
+}
+
+.btn.feito {
+  font-family: 'Tomorrow', sans-serif;
+  width: 420px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #8BFACC;
+  border: 2px solid #000000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn.feito:hover 
+{
+  background-color: #8bfaccaf;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* duas colunas iguais */
+  gap: 20px;
+  /* espaço entre campos */
+  width: 900px;
+  /* ajuste conforme necessário */
+  margin: 0 auto;
+}
+
+.campo {
+  font-family: 'Tomorrow', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.campo :placeholder-shown {
+  text-align: center;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.meio {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  /* centraliza o botão */
+  margin-top: 5px;
+}
+
+.campo-endereco {
+  grid-column: span 2;
+  /* ocupa as duas colunas */
+}
+
+.campo input {
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #9BDFFF;
+}
+
+.form-grid-ong {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.endereco-label {
+  grid-column: span 2;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.botao-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.botao-container .btn.feito {
+  width: 400px;
+}

@@ -66,10 +66,10 @@ Sua frustração está na dificuldade de manter uma comunicação eficaz com a p
 | RF02 | O sistema deve permitir que o doador cadastre roupas, inserindo informações como tipo, tamanho, estado de conservação e foto. |    ALTA     |
 | RF03 | O sistema deve permitir que o receptor pesquise roupas disponíveis utilizando filtros (tipo, tamanho, estado). |   MODERADO     |
 | RF04 | O sistema deve permitir que o doador edite ou exclua roupas já cadastradas.            |    MODERADO    |
-| RF05 | O sistema deve permitir o cadastro de ponto de coletas.                                |    ALTA    |
-| RF06 | O sistema deve permitir que o doador aceite ou recuse solicitações de doação.          |    BAIXA    |
+| RF05 | O sistema deve permitir o cadastro de ONG/ponto de coletas.                                |    ALTA    |
+| RF06 |  O sistema deve armazenar os dados de usuários, roupas e pontos de coleta em um banco de dados. | ALTA |
 | RF07 | O sistema deve disponibilizar o histórico de doações realizadas por cada usuário.      |    BAIXA    |
-| RF08 | O sistema deve permitir que o receptor acompanhe o status de sua solicitação (pendente, aceita, recusada). |    MODERADO     |
+| RF08 | O sistema deve permitir que o usuário faça login utilizando e-mail e senha.    |    ALTA     |
 | RF09 | O sistema deve permitir que os usuários recuperem a senha em caso de esquecimento.     |    BAIXA    |
 | RF10 | O sistema deve permitir também a possibilidade de editar os pontos de coleta.          |    MODERADO    |
 

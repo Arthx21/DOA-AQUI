@@ -21,3 +21,7 @@ C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\P
 C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\Programa\obj\Debug\net9.0\Programa.pdb
 C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\Programa\obj\Debug\net9.0\Programa.genruntimeconfig.cache
 C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\Programa\obj\Debug\net9.0\ref\Programa.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\Programa\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\Programa\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\Programa\bin\Debug\net9.0\SendGrid.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\2025-2-p3-tidai-doacaoroupa\src\back\Programa\bin\Debug\net9.0\StarkbankEcdsa.dll

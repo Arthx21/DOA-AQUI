@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DoaAqui - Conectando Solidariedade</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    // Rolagem suave para seções do footer
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo"><img src="images/logo2.png" alt="DoaAqui"></div>
+    <div class="links">
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a href="login.html">Entrar</a>
+    </div>
+  </nav>
+
+  <!-- Seção principal -->
+  <section class="hero">
+    <div class="texto">
+      <h1>Conectando Solidariedade e Esperança</h1>
+      <p>O DoaAqui é uma plataforma que une doadores, ONGs e pessoas em situação de vulnerabilidade.
+        Nosso objetivo é facilitar a doação de roupas e itens essenciais, promovendo dignidade e empatia.</p>
+    </div>
+    <div class="imagem">
+      <img src="images/solidariedade.jpg" alt="Imagem de solidariedade">
+    </div>
+  </section>
+
+  <!-- Seção Doadores -->
+  <section class="publico doadores">
+    <div class="texto">
+      <h2>Para Doadores</h2>
+      <p>Transforme o que não usa mais em oportunidades. Suas doações ajudam quem mais precisa.</p>
+      <a href="cadastro.html" class="botao">Torne-se um Doador</a>
+    </div>
+    <div class="imagem">
+      <img src="images/doadores.jpg" alt="Doadores">
+    </div>
+  </section>
+
+  <!-- Seção Receptores -->
+  <section class="publico receptores">
+    <div class="imagem">
+      <img src="images/receptores.jpg" alt="Receptores">
+    </div>
+    <div class="texto">
+      <h2>Para Receptores</h2>
+      <p>Encontre roupas e doações de forma simples e acessível, com o apoio de ONGs parceiras.</p>
+      <a href="cadastro.html" class="botao">Cadastre-se como Receptor</a>
+    </div>
+  </section>
+
+  <!-- Seção ONGs -->
+  <section class="publico ongs">
+    
+    <div class="texto">
+      <h2>Para ONGs</h2>
+      <p>Cadastre sua instituição e receba doações diretamente de doadores da sua região.</p>
+      <a href="cadastro.html" class="botao">Cadastrar ONG</a>
+    </div>
+    <div class="imagem">
+      <img src="images/ongs.jpg" alt="ONGs">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div id="sobre" class="footer-section">
+        <h3>Sobre</h3>
+        <p>Somos uma equipe de estudantes comprometidos em fazer a diferença.
+          O DoaAqui nasceu do desejo de unir tecnologia e solidariedade,
+          criando uma ponte entre quem quer ajudar e quem mais precisa.</p>
+      </div>
+
+      <div id="contato" class="footer-section">
+        <h3>Contato</h3>
+        <p>📧 E-mail: doaaqui.mailservice@gmail.com</p>
+        <p>📞 Telefone: (31) 91234-5678</p>
+      </div>
+    </div>
+
+    <p class="copy">© 2025 DoaAqui | Todos os direitos reservados</p>
+  </footer>
+  <script src="particles.min.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json');
+  </script>
+</body>
+
+</html>

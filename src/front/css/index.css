@@ -1,0 +1,189 @@
+/* Estilo geral */
+body {
+  margin: 0;
+  font-family: "Tomorrow", sans-serif;
+  background-color: #f2f2f2;
+  color: #111;
+
+  
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  padding-left: 20px;
+  margin-right: 50px;
+  background: #f2f2f2;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+   box-shadow: 0 0 10px #000;
+   
+}
+
+.logo img 
+{
+  width: 120px;
+  height: 60px;
+  font-size: 1.3vh;
+}
+
+.navbar .logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  
+}
+
+.links {
+  margin-right: 50px;
+}
+
+.navbar .links a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.navbar .links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero (introdução) */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 0 80px;
+  background-color: #e7e7e7;
+  background: linear-gradient(50deg, #e7e7e7, #c3c8ce);
+  background-size: 400% 400%;
+  
+}
+
+.hero .texto {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.hero .texto h1 {
+  font-size: 6vh;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero .texto p {
+  font-size: 3vh;
+  color: #333;
+}
+
+.hero .imagem {
+  flex: 1;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Seções de públicos */
+.publico {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 80px;
+  background-color: #f9f9f9;
+}
+
+.publico:nth-child(even) {
+  background-color: #efefef;
+}
+
+.publico .texto {
+  flex: 1;
+  padding: 0 40px;
+  font-size: 6vh;
+}
+
+.publico .imagem {
+  flex: 1;
+}
+
+.imagem img {
+   box-shadow: 0 0 10px #000;
+}
+
+.publico img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+ 
+}
+
+.publico h2 {
+  font-size: 5vh;
+  margin-bottom: 15px;
+}
+
+.publico p {
+  font-size: 3vh;
+  margin-bottom: 25px;
+}
+
+.botao {
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  transition: 0.3s;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.botao:hover {
+  background: #333;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #222;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .hero, .publico {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .texto, .publico .texto {
+    padding: 0;
+  }
+
+  .hero {
+    padding: 80px 30px;
+  }
+
+  .publico {
+    padding: 80px 30px;
+  }
+}
+
+@keyframes mover {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+

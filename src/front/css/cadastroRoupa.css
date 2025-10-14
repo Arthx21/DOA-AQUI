@@ -1,0 +1,296 @@
+body {
+  font-family: 'Tomorrow', sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.logo {
+    display: block;        /* transforma em bloco */
+    margin: -45px auto 0;  /* centraliza horizontalmente e aplica margin-top */
+    width: 300px;
+    height: auto;
+}
+
+.linha-separadora {
+
+  border: 0px;
+  height: 2px;
+  background-color: #000000;
+  margin-top: 30px;
+}
+
+.btn-voltar {
+  position: fixed;
+  top: 20px;
+  left: 40px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 35px;
+}
+
+.btn-voltar::before {
+  content: "";
+  border: solid #9AFFC9;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(135deg);
+  transition: 0.3s;
+}
+
+.btn-voltar:hover::before {
+  border-color: black;
+}
+
+h1 {
+  font-family: 'Tomorrow', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+h3 {
+  font-family: 'Tomorrow', sans-serif;
+  text-align: center;
+  margin-top: -10px;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.formulario-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.formulario {
+  display: flex;
+  font-family: 'Tomorrow', sans-serif;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario :placeholder-shown {
+  text-align: center;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.formulario.ativo {
+  font-family: 'Tomorrow', sans-serif;
+  display: flex;
+}
+
+form p {
+  font-family: 'Tomorrow', sans-serif;
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+form input {
+  padding: 10px;
+  border: 2px solid #ffffff;
+  width: 400px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #9BDFFF;
+}
+
+.btn.feito {
+  font-family: 'Tomorrow', sans-serif;
+  width: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #8BFACC;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.btn.feito:hover 
+{
+  background-color: #8bfaccaf;
+}
+
+.campo {
+  font-family: 'Tomorrow', sans-serif;
+  margin-top: 15px;
+  flex-direction: column;
+}
+
+#escolher-ong select {
+  font-family: 'Tomorrow', sans-serif;
+  text-align: center;
+  width: 420px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  background-color: #9BDFFF;
+  color: rgb(0, 0, 0);
+}
+
+.campos-lado {
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.campos-lado .campo {
+  flex: 1;
+}
+
+.campos-lado select {
+  width: 100%;
+  height: 30px;
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  background-color: #9BDFFF;
+  color: rgb(0, 0, 0);
+}
+
+.campo :placeholder-shown {
+  text-align: center;
+  font-family: 'Tomorrow', sans-serif;
+}
+
+.campo input {
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #9BDFFF;
+}
+
+.campo input:hover {
+  background-color: #8BFACC;
+}
+
+.campo textarea {
+  padding: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  font-size: 18px;
+  background-color: #9BDFFF;
+}
+
+.campo textarea:hover {
+  background-color: #8BFACC;
+}
+
+#idong:hover {
+  background-color: #8BFACC;
+}
+
+.form-grid-ong {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* duas colunas iguais */
+  gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.endereco-label {
+  grid-column: span 2;
+  /* ocupa as duas colunas */
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.botao-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.botao-container .btn.feito {
+  width: 400px;
+}
+
+.campo-imagem {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.botao-imagem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #A4E5FF;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 420px;
+  height: 140px;
+  font-size: 16px;
+  color: #000;
+  cursor: pointer;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.botao-imagem:hover {
+  background-color: #8BFACC;
+}
+
+.circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #8BFACC;
+  color: black;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#imagem {
+  display: none;
+}
+
+/* Remove a seta padrão */
+select {
+  font-family: 'Tomorrow', sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
+  /* Chrome, Safari */
+  -moz-appearance: none;
+  /* Firefox */
+  background-color: #9BDFFF;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  padding: 0px;
+  width: 100%;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg fill='black' height='10' viewBox='0 0 24 24' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px;
+}
+
+/* Impede que a cor mude no hover/focus */
+select:hover {
+  background-color: #8BFACC;
+}
+
+select:focus {
+  background-color: #9BDFFF;
+  border-color: #ffffff;
+  outline: none;
+}

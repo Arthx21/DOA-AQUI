@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de ONGs - DoaAqui</title>
+    <link rel="stylesheet" href="css/ongstyle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@400;700&display=swap"
+    rel="stylesheet">
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Banner Verde -->
+    <header>
+
+        <!-- Barra de Navegação -->
+        <nav class="navbar">
+            <div class="logo"><a href="receptorinicial.html"><img src="images/logo.png" alt="Camiseta cinza GG masculina"></a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            <ul class="nav-links mobile">
+                <li><a href="indexMasculino.html">Masculino</a></li>
+                <li><a href="indexFeminino.html">Feminino</a></li>
+                <li><a href="MapaONG.html">ONGs</a></li>
+            </ul>
+            <ul class="nav-links">
+                <li><a href="indexMasculino.html">Masculino</a></li>
+                <li><a href="indexFeminino.html">Feminino</a></li>
+                <li><a href="MapaONG.html">ONGs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Mapa de ONGs</h1>
+        <div id="map"></div>
+
+        <!-- MAPA DE ONG -->
+
+    </main>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/ong.js"></script>
+    
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links.mobile');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

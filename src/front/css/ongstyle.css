@@ -1,30 +1,15 @@
 /* Estilo geral */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Tomorrow", sans-serif;
   background-color: #f4f4f4;
-}
-    
-/* Banner verde */
-.banner {
-  position: fixed;         /* deixa o banner fixo */
-  top: 0;                  /* gruda no topo */
-  left: 0;
-  width: 100%;             /* largura total */
-  background-color: #A8F5C4;
-  color: #1a9b00;
-  text-align: center;
-  padding: 3px 0;
-  font-size: 17px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  z-index: 1001;           /* acima da navbar */
 }
 
 /* Barra de navegação */
 
 .navbar {
   position: fixed;
-  top: 50px;               /* joga a navbar para baixo do banner (ajuste conforme a altura do banner) */
+  top: 0;               /* joga a navbar para baixo do banner (ajuste conforme a altura do banner) */
   left: 0;
   width: 100%;
   display: flex;
@@ -76,6 +61,7 @@ body {
   gap: 100px;
   margin: 20px;
   padding: 0;
+  padding-right: 20px;
 }
 
 .nav-links.mobile {
@@ -114,7 +100,7 @@ body {
 }
 
 main {
-  padding: 30px 20px;
+  padding: 0px 20px;
   height: calc(100vh - 120px); /* 120px = altura do banner + navbar */
   overflow-y: auto; /* esconde a barra de rolagem vertical */
   overflow-x: hidden; /* esconde a barra de rolagem horizontal */

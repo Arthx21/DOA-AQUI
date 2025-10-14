@@ -1,0 +1,51 @@
+## Arquivo .sql
+
+```sql
+CREATE TABLE Pessoa (
+    cpf VARCHAR(14) PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    telefone VARCHAR(20),
+    senha VARCHAR(30) NOT NULL,
+    email VARCHAR(100) UNIQUE
+);
+
+CREATE TABLE Doador (
+    cpf VARCHAR(14) PRIMARY KEY,
+    roupasdoadas INT DEFAULT 0,
+    FOREIGN KEY (cpf) REFERENCES Pessoa(cpf)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+CREATE TABLE Receptor (
+    cpf VARCHAR(14) PRIMARY KEY,
+    roupasrecebidas INT DEFAULT 0,
+    FOREIGN KEY (cpf) REFERENCES Pessoa(cpf)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+CREATE TABLE ONG (
+    cpf VARCHAR(14) PRIMARY KEY,
+    rua VARCHAR(100) NOT NULL,
+    estado VARCHAR(50) NOT NULL,
+    cep VARCHAR(10) NOT NULL,
+    numero INT NOT NULL,
+    bairro VARCHAR(50) NOT NULL,
+    FOREIGN KEY (cpf) REFERENCES Pessoa(cpf)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+CREATE TABLE Roupas (
+    idroupa INT AUTO_INCREMENT PRIMARY KEY,
+    cpf VARCHAR(14) NOT NULL,
+    descricao VARCHAR(200) NOT NULL,
+    tamanho VARCHAR(10),
+    genero VARCHAR(20) NOT NULL,
+    imagem VARCHAR(255) NOT NULL,
+    FOREIGN KEY (cpf) REFERENCES Doador(cpf)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+```
