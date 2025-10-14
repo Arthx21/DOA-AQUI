@@ -7,7 +7,7 @@ if (!nome || !tipo || !id) {
     window.location.href = "login.html";
 }
 
-const API_URL = "http://3.91.78.43:5000";
+const API_URL = "https://doa-aqui.onrender.com";
 
 // Inicializa o mapa
 const map = L.map('map').setView([-19.945928, -44.203712], 11); // centro inicial

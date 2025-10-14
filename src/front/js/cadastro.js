@@ -1,4 +1,4 @@
-const API_URL = "http://3.91.78.43:5000";
+const API_URL = "https://doa-aqui.onrender.com";
 
 function mudarFormulario(tipo, botao) {
   const formularios = document.querySelectorAll(".formulario");

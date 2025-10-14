@@ -14,7 +14,7 @@ if (!nome || !tipo || !id) {
 }
 
 
-const API_URL = "http://3.91.78.43:5000";
+const API_URL = "https://doa-aqui.onrender.com";
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formRoupa");
