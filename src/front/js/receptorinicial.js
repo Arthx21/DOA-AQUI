@@ -62,7 +62,7 @@ function toggleMenu() {
 
 /* Back-END   */
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://doa-aqui.vercel.app";
 
 
 async function getRoupas() {

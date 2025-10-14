@@ -18,7 +18,7 @@ async function carregarpessoa() {
 }
 carregarpessoa();
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://doa-aqui.vercel.app";
 
 function rolar(tipo, direcao) {
   document.getElementById(`carrossel-${tipo}`)

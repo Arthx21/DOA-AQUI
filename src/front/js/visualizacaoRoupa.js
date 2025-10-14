@@ -14,7 +14,7 @@ if (!nome || !tipo || !id) {
 }
 
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://doa-aqui.vercel.app";
 
 // Pega o id da roupa da URL
 const params = new URLSearchParams(window.location.search);

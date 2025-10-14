@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://doa-aqui.vercel.app";
 
 function mudarFormulario(tipo, botao) {
   const formularios = document.querySelectorAll(".formulario");

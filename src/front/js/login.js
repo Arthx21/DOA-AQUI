@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://doa-aqui.vercel.app";
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
