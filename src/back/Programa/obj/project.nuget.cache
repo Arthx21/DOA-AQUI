@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X77s73Pk2MU=",
+  "dgSpecHash": "JYvZOzodcnc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\2025-2-p3-tidai-doacaoroupa\\src\\back\\Programa\\Programa.csproj",
+  "projectFilePath": "C:\\Users\\arthu\\OneDrive\\Documentos\\GitHub\\DOA-AQUI\\src\\back\\Programa\\Programa.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arthu\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\arthu\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
