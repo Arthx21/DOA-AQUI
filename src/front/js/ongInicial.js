@@ -14,7 +14,7 @@ if (!nome || !tipo || !id) {
 }
 
 
-const API_URL = "https://doa-aqui.vercel.app";
+const API_URL = "http://3.91.78.43:5000";
 
 
 async function getRoupas() {
