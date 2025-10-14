@@ -9,11 +9,10 @@ using Classes;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowVercel", policy =>
-        policy.WithOrigins("https://doa-aqui.vercel.app") 
+        policy.WithOrigins("https://doa-aqui.vercel.app") // seu domínio Vercel
               .AllowAnyMethod()
               .AllowAnyHeader());
 });
@@ -28,13 +27,8 @@ app.UseCors("AllowVercel");
 app.UseSwagger();
 app.UseSwaggerUI();
 
-string connectionString = "Server=mysql-e51083d-doaaqui.k.aivencloud.com;" +
-                          "Port=26584;" +
-                          "Database=doaaquiDB;" +
-                          "User ID=avnadmin;" +
-                          "Password=AVNS_nIqBD4P6y_dcBlXxHZO;" +
-                          "SslMode=Required;" +
-                          "SslCa=ca.pem;";
+string connectionString = Environment.GetEnvironmentVariable("DOAAQUI_DB")
+    ?? throw new InvalidOperationException("A variável de ambiente DOAAQUI_DB não está definida.");
 
 // GET /TestarConexao
 app.MapGet("/TestarConexao", async () =>
@@ -516,8 +510,8 @@ app.MapPost("/recuperar-senha", async (HttpContext context) =>
 
 
 app.MapPost("/redefinir-senha", async (HttpContext context) =>
-{   
-     using var conn = new MySqlConnection(connectionString);
+{
+    using var conn = new MySqlConnection(connectionString);
 
     var body = await JsonSerializer.DeserializeAsync<Dictionary<string, string>>(context.Request.Body);
     string token = body["token"];
