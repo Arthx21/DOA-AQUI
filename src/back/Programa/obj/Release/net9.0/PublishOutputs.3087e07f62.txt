@@ -1,0 +1,15 @@
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Programa.exe
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Programa.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Programa.deps.json
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Programa.runtimeconfig.json
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Programa.pdb
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\BCrypt.Net-Next.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Microsoft.OpenApi.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\MySqlConnector.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Newtonsoft.Json.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\SendGrid.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\StarkbankEcdsa.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\arthu\OneDrive\Documentos\GitHub\DOA-AQUI\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

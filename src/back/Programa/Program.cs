@@ -6,7 +6,7 @@ using System.Text.Json;
 
 using Classes;
 
-
+Console.WriteLine("Servidor iniciado...");
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
