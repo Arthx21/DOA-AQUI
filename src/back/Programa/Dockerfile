@@ -13,6 +13,7 @@ EXPOSE 5000
 ENTRYPOINT ["dotnet", "Programa.dll"]
 
 
-COPY src/back/Programa/ca.pem /app/ca.pem
+COPY ca.pem /app/ca.pem
+
 
 ENV CONNECTION_STRING="Server=mysql-e51083d-doaaqui.k.aivencloud.com;Port=26584;Database=doaaquiDB;User ID=avnadmin;Password=AVNS_nIqBD4P6y_dcBlXxHZO;SslMode=Required;SslCa=/app/ca.pem;"
