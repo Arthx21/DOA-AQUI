@@ -7,7 +7,9 @@ namespace Classes
 
     public static class EmailService
     {
-        private const string ApiKey = "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"; // coloque a nova chave aqui
+        public static readonly string ApiKey =
+                Environment.GetEnvironmentVariable("API_KEY")
+                ?? throw new InvalidOperationException("API_KEY não encontrada nas variáveis de ambiente.");// coloque a nova chave aqui
 
         public static async Task EnviarAsync(string para, string assunto, string corpoHtml)
         {
