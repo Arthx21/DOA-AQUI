@@ -481,7 +481,7 @@ app.MapPost("/recuperar-senha", async (HttpContext context) =>
     await update.ExecuteNonQueryAsync();
 
     // Monta link para redefinir senha
-    string link = $"http://127.0.0.1:5500/src/front/pages/RedefinirSenha.html?token={token}";
+    string link = $"https://doa-aqui.vercel.app/RedefinirSenha.html?token={token}";
 
     // --- Envia e-mail usando SendGrid ---
     try
